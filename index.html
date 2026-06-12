@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
@@ -58,14 +57,11 @@ button:hover {
     text-align: right;
 }
 </style>
-
 </head>
 
 <body>
 
-<!-- Música -->
-
-<audio id="musica" loop>
+<audio id="musica">
     <source src="musica.mp3" type="audio/mpeg">
 </audio>
 
@@ -99,7 +95,6 @@ Meu amor, ❤️
 Talvez eu não diga isso todos os dias, mas você é muito importante para mim. Seu sorriso ilumina meus dias e sua presença torna tudo melhor. Gosto de cada momento que passamos juntos, das conversas, das risadas e até dos silêncios que compartilhamos.
 
 <br><br>
-
 </p>
 
 <div class="assinatura">
@@ -114,21 +109,12 @@ Um beijo no seu coração ♥️
 <script>
 function abrirCarta() {
 
-    // Música com entrada suave
-    const musica = document.getElementById("musica");
+    var musica = document.getElementById("musica");
 
-    musica.volume = 0;
-    musica.play();
+    musica.play().catch(function(erro){
+        console.log("Erro ao tocar:", erro);
+    });
 
-    let fade = setInterval(() => {
-        if (musica.volume < 0.8) {
-            musica.volume = Math.min(0.8, musica.volume + 0.05);
-        } else {
-            clearInterval(fade);
-        }
-    }, 200);
-
-    // Abre a carta
     document.querySelector("button").style.display = "none";
     document.getElementById("carta").style.display = "block";
 }
