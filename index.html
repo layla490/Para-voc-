@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
@@ -35,6 +36,7 @@ button {
     font-size: 18px;
     border-radius: 30px;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 button:hover {
@@ -56,9 +58,16 @@ button:hover {
     text-align: right;
 }
 </style>
+
 </head>
 
 <body>
+
+<!-- Música -->
+
+<audio id="musica" loop>
+    <source src="musica.mp3" type="audio/mpeg">
+</audio>
 
 <div class="container">
 
@@ -91,12 +100,12 @@ Talvez eu não diga isso todos os dias, mas você é muito importante para mim. 
 
 <br><br>
 
+</p>
+
 <div class="assinatura">
 De sua princesa: Laylla ✨<br>
 Um beijo no seu coração ♥️
 </div>
-
-</p>
 
 </div>
 
@@ -104,6 +113,22 @@ Um beijo no seu coração ♥️
 
 <script>
 function abrirCarta() {
+
+    // Música com entrada suave
+    const musica = document.getElementById("musica");
+
+    musica.volume = 0;
+    musica.play();
+
+    let fade = setInterval(() => {
+        if (musica.volume < 0.8) {
+            musica.volume = Math.min(0.8, musica.volume + 0.05);
+        } else {
+            clearInterval(fade);
+        }
+    }, 200);
+
+    // Abre a carta
     document.querySelector("button").style.display = "none";
     document.getElementById("carta").style.display = "block";
 }
