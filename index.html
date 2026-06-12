@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Carta 💌</title>
+<title>💌 Para você</title>
 
 <style>
 body {
@@ -47,11 +47,13 @@ button:hover {
     text-align: left;
     line-height: 1.8;
     color: #444;
+    font-size: 17px;
 }
 
 .assinatura {
     margin-top: 20px;
     font-weight: bold;
+    text-align: right;
 }
 </style>
 </head>
@@ -60,37 +62,48 @@ button:hover {
 
 <div class="container">
 
-<h1>💌 Uma carta</h1>
+<h1>💌 Um recadinho</h1>
 
-<p>Tem algo aqui pra você…</p>
+<p>Tem algo especial aqui pra você...</p>
 
-<button onclick="abrir()">Abrir carta</button>
+<button onclick="abrirCarta()">Abrir mensagem</button>
 
 <div id="carta">
 
 <p>
-Não sei exatamente como começar isso, mas queria deixar algo simples aqui.
+Olá meu amorzinho,
 
 <br><br>
 
-Às vezes algumas pessoas aparecem na nossa vida de um jeito inesperado e mudam o nosso dia sem nem perceber.
+Este recadinho é pra você.
 
 <br><br>
 
-Essa é só uma forma de dizer isso.
+Você é o meu lugar favorito no mundo. Ao seu lado, os dias ficam mais leves, os sorrisos mais sinceros e a vida muito mais bonita. Te adoro por tudo o que você é e por tudo o que me faz sentir.
 
-</p>
+<br><br>
+
+Meu amor, ❤️
+
+<br><br>
+
+Talvez eu não diga isso todos os dias, mas você é muito importante para mim. Seu sorriso ilumina meus dias e sua presença torna tudo melhor. Gosto de cada momento que passamos juntos, das conversas, das risadas e até dos silêncios que compartilhamos.
+
+<br><br>
 
 <div class="assinatura">
-— alguém 🙂
+De sua princesa: Laylla ✨<br>
+Um beijo no seu coração ♥️
 </div>
+
+</p>
 
 </div>
 
 </div>
 
 <script>
-function abrir() {
+function abrirCarta() {
     document.querySelector("button").style.display = "none";
     document.getElementById("carta").style.display = "block";
 }
