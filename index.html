@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carta 💌</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+button {
+    margin-top: 20px;
+    padding: 15px 30px;
+    border: none;
+    background: #e91e63;
+    color: white;
+    font-size: 18px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+#carta {
+    display: none;
+    margin-top: 20px;
+    text-align: left;
+    line-height: 1.8;
+    color: #444;
+}
+
+.assinatura {
+    margin-top: 20px;
+    font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>💌 Uma carta</h1>
+
+<p>Tem algo aqui pra você…</p>
+
+<button onclick="abrir()">Abrir carta</button>
+
+<div id="carta">
+
+<p>
+Não sei exatamente como começar isso, mas queria deixar algo simples aqui.
+
+<br><br>
+
+Às vezes algumas pessoas aparecem na nossa vida de um jeito inesperado e mudam o nosso dia sem nem perceber.
+
+<br><br>
+
+Essa é só uma forma de dizer isso.
+
+</p>
+
+<div class="assinatura">
+— alguém 🙂
+</div>
+
+</div>
+
+</div>
+
+<script>
+function abrir() {
+    document.querySelector("button").style.display = "none";
+    document.getElementById("carta").style.display = "block";
+}
+</script>
+
+</body>
+</html>
